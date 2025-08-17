@@ -1,6 +1,6 @@
 import React from "react";
 
-function Spinner() {
+const Spinner = () => {
   return (
     <>
       <div className="d-flex justify-content-center">
@@ -10,6 +10,6 @@ function Spinner() {
       </div>
     </>
   );
-}
+};
 
 export default Spinner;

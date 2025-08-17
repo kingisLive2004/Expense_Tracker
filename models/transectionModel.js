@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const transactionSchema = new mongoose.Schema(
+const transectionSchema = new mongoose.Schema(
   {
     userid: {
       type: String,
@@ -16,24 +16,22 @@ const transactionSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      required: [true, "category is required"],
+      requires: [true, "cat is required"],
     },
-    reference: {
+    refrence: {
       type: String,
     },
     description: {
       type: String,
-      required: [true, "description is required"],
+      required: [true, "desc is required"],
     },
     date: {
       type: Date,
-      required: [true, "date is required"],
+      required: [true, "data is required"],
     },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
-const transactionModel = new mongoose.model("transactions", transactionSchema);
-module.exports = transactionModel;
+const transectionModel = mongoose.model("transections", transectionSchema);
+module.exports = transectionModel;

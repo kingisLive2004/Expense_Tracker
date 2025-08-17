@@ -11,13 +11,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "email is required and should be unique"],
       unique: true,
-      lowercase: true,
     },
     password: {
       type: String,
-      required: [true, "password is required "],
-      unique: true,
-      minlength: [8, "password should be atleast 8 characters"],
+      required: [true, "password is required"],
     },
   },
   { timestamps: true }
